@@ -14,6 +14,8 @@
 		8BF650F726F78D930073BF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF650F626F78D930073BF8C /* Assets.xcassets */; };
 		8BF650FA26F78D930073BF8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BF650F826F78D930073BF8C /* LaunchScreen.storyboard */; };
 		8BF6510226F797CB0073BF8C /* ImageDownloaderEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6510126F797CB0073BF8C /* ImageDownloaderEx.swift */; };
+		8BF6510526F799D10073BF8C /* MVVMHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6510426F799D10073BF8C /* MVVMHelpers.swift */; };
+		8BF6510726F79A160073BF8C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6510626F79A160073BF8C /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8BF650F926F78D930073BF8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BF650FB26F78D930073BF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BF6510126F797CB0073BF8C /* ImageDownloaderEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderEx.swift; sourceTree = "<group>"; };
+		8BF6510426F799D10073BF8C /* MVVMHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMHelpers.swift; sourceTree = "<group>"; };
+		8BF6510626F79A160073BF8C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				8BF650F826F78D930073BF8C /* LaunchScreen.storyboard */,
 				8BF650FB26F78D930073BF8C /* Info.plist */,
 				8BF6510326F797CE0073BF8C /* Extension */,
+				8BF6510826F79A450073BF8C /* MVVM */,
 			);
 			path = NYTimesDemo;
 			sourceTree = "<group>";
@@ -76,6 +81,15 @@
 				8BF6510126F797CB0073BF8C /* ImageDownloaderEx.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8BF6510826F79A450073BF8C /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				8BF6510426F799D10073BF8C /* MVVMHelpers.swift */,
+				8BF6510626F79A160073BF8C /* Observable.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BF650F226F78D910073BF8C /* ViewController.swift in Sources */,
+				8BF6510726F79A160073BF8C /* Observable.swift in Sources */,
 				8BF6510226F797CB0073BF8C /* ImageDownloaderEx.swift in Sources */,
 				8BF650EE26F78D910073BF8C /* AppDelegate.swift in Sources */,
+				8BF6510526F799D10073BF8C /* MVVMHelpers.swift in Sources */,
 				8BF650F026F78D910073BF8C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
