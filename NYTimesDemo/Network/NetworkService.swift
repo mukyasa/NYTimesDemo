@@ -30,9 +30,10 @@ class NetworkService: NetworkServiceProtocol {
     let urlSession: URLSession
     let completionQueue: DispatchQueue
 
-    init(urlSessionConfig: URLSessionConfiguration = URLSessionConfiguration.default, completionQueue: DispatchQueue = DispatchQueue.main) {
+    init(urlSession: URLSession = URLSession.shared,
+         completionQueue: DispatchQueue = DispatchQueue.main) {
         self.completionQueue = completionQueue
-        urlSession = URLSession(configuration: urlSessionConfig)
+        self.urlSession = urlSession
     }
 
     func dataTask<T: Model>(_ request: Requestable,
@@ -71,7 +72,7 @@ class NetworkService: NetworkServiceProtocol {
 
     private func error(from response: URLResponse?) -> Error? {
         guard let response = response as? HTTPURLResponse else {
-            return NetworkError.badResponse
+            return nil
         }
         let statusCode = response.statusCode
         if statusCode >= 200,

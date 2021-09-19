@@ -29,6 +29,9 @@
 		8BF6512226F7BCAB0073BF8C /* ArticleListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BF6512026F7BCAB0073BF8C /* ArticleListTVC.xib */; };
 		8BF6512426F7BCD20073BF8C /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6512326F7BCD20073BF8C /* ReusableProtocol.swift */; };
 		8BF6512C26F7CE730073BF8C /* NYTimesDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6512B26F7CE730073BF8C /* NYTimesDemoTests.swift */; };
+		8BF6513926F7D0AF0073BF8C /* ArticleListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513826F7D0AF0073BF8C /* ArticleListServiceTests.swift */; };
+		8BF6513B26F7D8850073BF8C /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513326F7D05C0073BF8C /* URLSessionMock.swift */; };
+		8BF6513C26F7D8880073BF8C /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513626F7D0890073BF8C /* URLSessionDataTaskMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		8BF6512926F7CE730073BF8C /* NYTimesDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTimesDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BF6512B26F7CE730073BF8C /* NYTimesDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesDemoTests.swift; sourceTree = "<group>"; };
 		8BF6512D26F7CE730073BF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BF6513326F7D05C0073BF8C /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		8BF6513626F7D0890073BF8C /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		8BF6513826F7D0AF0073BF8C /* ArticleListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +178,27 @@
 			children = (
 				8BF6512B26F7CE730073BF8C /* NYTimesDemoTests.swift */,
 				8BF6512D26F7CE730073BF8C /* Info.plist */,
+				8BF6513A26F7D34A0073BF8C /* Articles Tests */,
+				8BF6513526F7D06A0073BF8C /* Network Mock */,
 			);
 			path = NYTimesDemoTests;
+			sourceTree = "<group>";
+		};
+		8BF6513526F7D06A0073BF8C /* Network Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8BF6513326F7D05C0073BF8C /* URLSessionMock.swift */,
+				8BF6513626F7D0890073BF8C /* URLSessionDataTaskMock.swift */,
+			);
+			path = "Network Mock";
+			sourceTree = "<group>";
+		};
+		8BF6513A26F7D34A0073BF8C /* Articles Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8BF6513826F7D0AF0073BF8C /* ArticleListServiceTests.swift */,
+			);
+			path = "Articles Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,8 +312,10 @@
 				8BF6511526F7AD7D0073BF8C /* ArticleListVM.swift in Sources */,
 				8BF6511126F7A0200073BF8C /* Model.swift in Sources */,
 				8BF650EE26F78D910073BF8C /* AppDelegate.swift in Sources */,
+				8BF6513C26F7D8880073BF8C /* URLSessionDataTaskMock.swift in Sources */,
 				8BF6512426F7BCD20073BF8C /* ReusableProtocol.swift in Sources */,
 				8BF6510526F799D10073BF8C /* MVVMHelpers.swift in Sources */,
+				8BF6513B26F7D8850073BF8C /* URLSessionMock.swift in Sources */,
 				8BF6511726F7AD890073BF8C /* ArticleListService.swift in Sources */,
 				8BF6512126F7BCAB0073BF8C /* ArticleListTVC.swift in Sources */,
 				8BF6511326F7AD710073BF8C /* ArticleListVC.swift in Sources */,
@@ -301,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF6513926F7D0AF0073BF8C /* ArticleListServiceTests.swift in Sources */,
 				8BF6512C26F7CE730073BF8C /* NYTimesDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,7 +525,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NYTimesDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -506,6 +535,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tickledmedia.NYTimesDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTimesDemo.app/NYTimesDemo";
@@ -516,7 +547,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NYTimesDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,6 +557,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tickledmedia.NYTimesDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTimesDemo.app/NYTimesDemo";
