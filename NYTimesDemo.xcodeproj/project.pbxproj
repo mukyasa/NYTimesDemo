@@ -13,6 +13,7 @@
 		8BF650F526F78D910073BF8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BF650F326F78D910073BF8C /* Main.storyboard */; };
 		8BF650F726F78D930073BF8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF650F626F78D930073BF8C /* Assets.xcassets */; };
 		8BF650FA26F78D930073BF8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BF650F826F78D930073BF8C /* LaunchScreen.storyboard */; };
+		8BF6510226F797CB0073BF8C /* ImageDownloaderEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6510126F797CB0073BF8C /* ImageDownloaderEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8BF650F626F78D930073BF8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BF650F926F78D930073BF8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BF650FB26F78D930073BF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BF6510126F797CB0073BF8C /* ImageDownloaderEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,17 @@
 				8BF650F626F78D930073BF8C /* Assets.xcassets */,
 				8BF650F826F78D930073BF8C /* LaunchScreen.storyboard */,
 				8BF650FB26F78D930073BF8C /* Info.plist */,
+				8BF6510326F797CE0073BF8C /* Extension */,
 			);
 			path = NYTimesDemo;
+			sourceTree = "<group>";
+		};
+		8BF6510326F797CE0073BF8C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8BF6510126F797CB0073BF8C /* ImageDownloaderEx.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BF650F226F78D910073BF8C /* ViewController.swift in Sources */,
+				8BF6510226F797CB0073BF8C /* ImageDownloaderEx.swift in Sources */,
 				8BF650EE26F78D910073BF8C /* AppDelegate.swift in Sources */,
 				8BF650F026F78D910073BF8C /* SceneDelegate.swift in Sources */,
 			);
