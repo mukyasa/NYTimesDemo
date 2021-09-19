@@ -30,7 +30,7 @@ class ArticleListTVC: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageView?.image = nil
+        imgArticle.image = nil
     }
 }
 
