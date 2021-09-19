@@ -1,5 +1,5 @@
 //
-//  NetworkServiceMock.swift
+//  ArticleListVMTests.swift
 //  NYTimesDemoTests
 //
 //  Created by mukesh on 20/9/21.
@@ -8,25 +8,27 @@
 import XCTest
 
 @testable import NYTimesDemo
-
-class ArticleListServiceTests: XCTestCase {
+class ArticleListVMTests: XCTestCase {
     var session: URLSessionMock!
     var networkService: ArticleListServiceProtocol!
+    var viewModel: ArticleListVMProtocol!
 
     override func setUp() {
         super.setUp()
         session = URLSessionMock()
         let networkHelper = NetworkService(urlSession: session)
         networkService = ArticleListService(networkService: networkHelper)
+        viewModel = ArticleListVM(networkService: networkService)
     }
 
     override func tearDown() {
         super.tearDown()
         session = nil
         networkService = nil
+        viewModel = nil
     }
 
-    func testSuccessResponse() {
+    func testViewModeIsNonEmpty() {
         let json = """
         {
           "status": "OK",
@@ -98,26 +100,16 @@ class ArticleListServiceTests: XCTestCase {
         """
         let data = Data(json.utf8)
         session.data = data
-
-        var result: [Article]?
-        var resultError: Error?
-        networkService.fetchArticles { articles, error in
-            result = articles
-            resultError = error
-        }
-        XCTAssertEqual(result?.count, 1)
-        XCTAssertNil(resultError)
+        viewModel.loadArticles()
+        XCTAssertEqual(viewModel.numberOfRowsIn(section: 1), 1)
+        XCTAssertEqual(viewModel.state.value, ViewModelState.loadingComplete)
     }
 
-    func testErrorResponse() {
-        session.error = NetworkError.badResponse
-        var result: [Article]?
-        var resultError: Error?
-        networkService.fetchArticles { articles, error in
-            result = articles
-            resultError = error
-        }
-        XCTAssertNotNil(resultError)
-        XCTAssertNil(result)
+    func testViewModeIsEmpty() {
+        let error = NetworkError.badResponse
+        session.error = error
+        viewModel.loadArticles()
+        XCTAssertEqual(viewModel.numberOfRowsIn(section: 1), 0)
+        XCTAssertEqual(viewModel.state.value, ViewModelState.loadingError(error: error))
     }
 }

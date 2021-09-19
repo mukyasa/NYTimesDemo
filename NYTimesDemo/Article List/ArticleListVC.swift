@@ -40,21 +40,23 @@ final class ArticleListVC: UIViewController, StoryboardableInitProtocol {
 
     fileprivate func addViewModelObserver() {
         viewModel.state.valueChanged = { [weak self] state in
-            guard let self = self else { return }
-            switch state {
-            case .loading:
-                self.loader.startAnimating()
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                switch state {
+                case .loading:
+                    self.loader.startAnimating()
 
-            case .loadingComplete:
-                self.tableView.reloadData()
-                self.loader.stopAnimating()
+                case .loadingComplete:
+                    self.tableView.reloadData()
+                    self.loader.stopAnimating()
 
-            case let .loadingError(error):
-                self.showMessage(error?.localizedDescription ?? "Something went wrong")
-                self.loader.stopAnimating()
+                case let .loadingError(error):
+                    self.showMessage(error?.localizedDescription ?? "Something went wrong")
+                    self.loader.stopAnimating()
 
-            default:
-                break
+                default:
+                    break
+                }
             }
         }
     }

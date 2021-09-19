@@ -32,6 +32,7 @@
 		8BF6513926F7D0AF0073BF8C /* ArticleListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513826F7D0AF0073BF8C /* ArticleListServiceTests.swift */; };
 		8BF6513D26F7E7940073BF8C /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513326F7D05C0073BF8C /* URLSessionMock.swift */; };
 		8BF6513F26F7E7980073BF8C /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513626F7D0890073BF8C /* URLSessionDataTaskMock.swift */; };
+		8BF6514126F7EBB10073BF8C /* ArticleListVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6514026F7EBB10073BF8C /* ArticleListVMTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		8BF6513326F7D05C0073BF8C /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		8BF6513626F7D0890073BF8C /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		8BF6513826F7D0AF0073BF8C /* ArticleListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListServiceTests.swift; sourceTree = "<group>"; };
+		8BF6514026F7EBB10073BF8C /* ArticleListVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListVMTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				8BF6513826F7D0AF0073BF8C /* ArticleListServiceTests.swift */,
+				8BF6514026F7EBB10073BF8C /* ArticleListVMTests.swift */,
 			);
 			path = "Articles Tests";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				8BF6513D26F7E7940073BF8C /* URLSessionMock.swift in Sources */,
 				8BF6513F26F7E7980073BF8C /* URLSessionDataTaskMock.swift in Sources */,
 				8BF6513926F7D0AF0073BF8C /* ArticleListServiceTests.swift in Sources */,
+				8BF6514126F7EBB10073BF8C /* ArticleListVMTests.swift in Sources */,
 				8BF6512C26F7CE730073BF8C /* NYTimesDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

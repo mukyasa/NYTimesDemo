@@ -28,11 +28,8 @@ protocol NetworkServiceProtocol {
 
 class NetworkService: NetworkServiceProtocol {
     let urlSession: URLSession
-    let completionQueue: DispatchQueue
 
-    init(urlSession: URLSession = URLSession.shared,
-         completionQueue: DispatchQueue = DispatchQueue.main) {
-        self.completionQueue = completionQueue
+    init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
     }
 
@@ -61,10 +58,7 @@ class NetworkService: NetworkServiceProtocol {
             } else {
                 result = .failure(NetworkError.noDataOrError)
             }
-
-            self.completionQueue.async {
-                completion(result)
-            }
+            completion(result)
         }
 
         task.resume()

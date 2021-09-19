@@ -21,6 +21,41 @@ enum ViewModelState {
     case loadingError(error: Error?)
 }
 
+private protocol AnyOptional {
+    var isNil: Bool { get }
+}
+
+extension Optional: AnyOptional {
+    var isNil: Bool { self == nil }
+}
+
+extension ViewModelState: Equatable {
+    public static func == (lhs: ViewModelState, rhs: ViewModelState) -> Bool {
+        switch (lhs, rhs) {
+        case (.loading, .loading):
+            return true
+        case (.loadingComplete, .loadingComplete):
+            return true
+        case (.idle, .idle):
+            return true
+        case (.loadingMore, .loadingMore):
+            return true
+        case (.refreshData, .refreshData):
+            return true
+        case let (.loadingMoreComplete(newlyAddedFirstRow: lhsFirstRow,
+                                       newlyAddedLastRow: lhsLastRow),
+                  .loadingMoreComplete(newlyAddedFirstRow: rhsFirstRow,
+                                       newlyAddedLastRow: rhsLastRow)):
+            return lhsFirstRow == rhsFirstRow && lhsLastRow == rhsLastRow
+        case let (.loadingError(error: lhsError),
+                  .loadingError(error: rhsError)):
+            return (lhsError.isNil && rhsError.isNil) || (!lhsError.isNil && !rhsError.isNil)
+        default:
+            return false
+        }
+    }
+}
+
 protocol ViewModelProtocol {
     var state: Observable<ViewModelState> { get set }
 }
