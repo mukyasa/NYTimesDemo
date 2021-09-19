@@ -30,8 +30,8 @@
 		8BF6512426F7BCD20073BF8C /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6512326F7BCD20073BF8C /* ReusableProtocol.swift */; };
 		8BF6512C26F7CE730073BF8C /* NYTimesDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6512B26F7CE730073BF8C /* NYTimesDemoTests.swift */; };
 		8BF6513926F7D0AF0073BF8C /* ArticleListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513826F7D0AF0073BF8C /* ArticleListServiceTests.swift */; };
-		8BF6513B26F7D8850073BF8C /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513326F7D05C0073BF8C /* URLSessionMock.swift */; };
-		8BF6513C26F7D8880073BF8C /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513626F7D0890073BF8C /* URLSessionDataTaskMock.swift */; };
+		8BF6513D26F7E7940073BF8C /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513326F7D05C0073BF8C /* URLSessionMock.swift */; };
+		8BF6513F26F7E7980073BF8C /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6513626F7D0890073BF8C /* URLSessionDataTaskMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -312,10 +312,8 @@
 				8BF6511526F7AD7D0073BF8C /* ArticleListVM.swift in Sources */,
 				8BF6511126F7A0200073BF8C /* Model.swift in Sources */,
 				8BF650EE26F78D910073BF8C /* AppDelegate.swift in Sources */,
-				8BF6513C26F7D8880073BF8C /* URLSessionDataTaskMock.swift in Sources */,
 				8BF6512426F7BCD20073BF8C /* ReusableProtocol.swift in Sources */,
 				8BF6510526F799D10073BF8C /* MVVMHelpers.swift in Sources */,
-				8BF6513B26F7D8850073BF8C /* URLSessionMock.swift in Sources */,
 				8BF6511726F7AD890073BF8C /* ArticleListService.swift in Sources */,
 				8BF6512126F7BCAB0073BF8C /* ArticleListTVC.swift in Sources */,
 				8BF6511326F7AD710073BF8C /* ArticleListVC.swift in Sources */,
@@ -328,6 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF6513D26F7E7940073BF8C /* URLSessionMock.swift in Sources */,
+				8BF6513F26F7E7980073BF8C /* URLSessionDataTaskMock.swift in Sources */,
 				8BF6513926F7D0AF0073BF8C /* ArticleListServiceTests.swift in Sources */,
 				8BF6512C26F7CE730073BF8C /* NYTimesDemoTests.swift in Sources */,
 			);
