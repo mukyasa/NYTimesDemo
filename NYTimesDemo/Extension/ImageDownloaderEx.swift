@@ -20,8 +20,10 @@ extension UIImageView {
         }
 
         // otherwise fire off a new download
-        let url = URL(string: urlString)
-        URLSession.shared.dataTask(with: url!, completionHandler: { data, _, error in
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
 
             // download hit an error so lets return out
             if error != nil {
@@ -31,8 +33,8 @@ extension UIImageView {
 
             DispatchQueue.main.async(execute: {
                 if let downloadedImage = UIImage(data: data!) {
-                    imageCache.setObject(downloadedImage, forKey: urlString as AnyObject)
-
+                    imageCache.setObject(downloadedImage,
+                                         forKey: urlString as AnyObject)
                     self.image = downloadedImage
                 }
             })

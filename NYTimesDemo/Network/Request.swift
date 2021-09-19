@@ -21,18 +21,32 @@ protocol Requestable {
 struct Request: Requestable {
     let path: String
     let method: String
+    let params: [String: Any]
 
     init(path: String,
-         method: String = "GET") {
+         method: String = "GET",
+         params: [String: Any] = [:]) {
         self.path = path
         self.method = method
+        self.params = params
     }
 
     func urlRequest() -> URLRequest {
-        guard let url = URL(string: path) else {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "api.nytimes.com"
+        components.path = path
+        var queryParams: [URLQueryItem] = [URLQueryItem(name: "api-key",
+                                                        value: "Oxd75GsHDbtpHsOBoIpLZmPrATvSQLEz")]
+        for (key, value) in params {
+            let queryItem = URLQueryItem(name: key,
+                                         value: "\(value)")
+            queryParams.append(queryItem)
+        }
+        components.queryItems = queryParams
+        guard let url = components.url else {
             fatalError("URL Request building error")
         }
-
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method
         return urlRequest

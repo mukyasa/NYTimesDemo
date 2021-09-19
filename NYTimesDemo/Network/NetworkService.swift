@@ -23,19 +23,19 @@ struct StatusCodeError: LocalizedError {
 
 protocol NetworkServiceProtocol {
     func dataTask<T: Model>(_ request: Requestable,
-                            completionQueue: DispatchQueue,
                             completion: @escaping (Result<T, Error>) -> Void)
 }
 
 class NetworkService: NetworkServiceProtocol {
     let urlSession: URLSession
+    let completionQueue: DispatchQueue
 
-    init(urlSessionConfig: URLSessionConfiguration = URLSessionConfiguration.default) {
+    init(urlSessionConfig: URLSessionConfiguration = URLSessionConfiguration.default, completionQueue: DispatchQueue = DispatchQueue.main) {
+        self.completionQueue = completionQueue
         urlSession = URLSession(configuration: urlSessionConfig)
     }
 
     func dataTask<T: Model>(_ request: Requestable,
-                            completionQueue: DispatchQueue = DispatchQueue.main,
                             completion: @escaping (Result<T, Error>) -> Void) {
         let urlRequest = request.urlRequest()
         // Send the request
@@ -61,7 +61,7 @@ class NetworkService: NetworkServiceProtocol {
                 result = .failure(NetworkError.noDataOrError)
             }
 
-            completionQueue.async {
+            self.completionQueue.async {
                 completion(result)
             }
         }

@@ -19,6 +19,15 @@
 		8BF6510A26F79B330073BF8C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6510926F79B330073BF8C /* NetworkService.swift */; };
 		8BF6510D26F79F1A0073BF8C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6510C26F79F1A0073BF8C /* Request.swift */; };
 		8BF6511126F7A0200073BF8C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6511026F7A0200073BF8C /* Model.swift */; };
+		8BF6511326F7AD710073BF8C /* ArticleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6511226F7AD710073BF8C /* ArticleListVC.swift */; };
+		8BF6511526F7AD7D0073BF8C /* ArticleListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6511426F7AD7D0073BF8C /* ArticleListVM.swift */; };
+		8BF6511726F7AD890073BF8C /* ArticleListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6511626F7AD890073BF8C /* ArticleListService.swift */; };
+		8BF6511A26F7ADBC0073BF8C /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6511926F7ADBC0073BF8C /* ArticleModel.swift */; };
+		8BF6511C26F7B8350073BF8C /* StoryboardEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6511B26F7B8350073BF8C /* StoryboardEx.swift */; };
+		8BF6511E26F7BBC90073BF8C /* UIViewControllerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6511D26F7BBC90073BF8C /* UIViewControllerEx.swift */; };
+		8BF6512126F7BCAB0073BF8C /* ArticleListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6511F26F7BCAB0073BF8C /* ArticleListTVC.swift */; };
+		8BF6512226F7BCAB0073BF8C /* ArticleListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BF6512026F7BCAB0073BF8C /* ArticleListTVC.xib */; };
+		8BF6512426F7BCD20073BF8C /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF6512326F7BCD20073BF8C /* ReusableProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +45,15 @@
 		8BF6510926F79B330073BF8C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		8BF6510C26F79F1A0073BF8C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		8BF6511026F7A0200073BF8C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8BF6511226F7AD710073BF8C /* ArticleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListVC.swift; sourceTree = "<group>"; };
+		8BF6511426F7AD7D0073BF8C /* ArticleListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListVM.swift; sourceTree = "<group>"; };
+		8BF6511626F7AD890073BF8C /* ArticleListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListService.swift; sourceTree = "<group>"; };
+		8BF6511926F7ADBC0073BF8C /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		8BF6511B26F7B8350073BF8C /* StoryboardEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEx.swift; sourceTree = "<group>"; };
+		8BF6511D26F7BBC90073BF8C /* UIViewControllerEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerEx.swift; sourceTree = "<group>"; };
+		8BF6511F26F7BCAB0073BF8C /* ArticleListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListTVC.swift; sourceTree = "<group>"; };
+		8BF6512026F7BCAB0073BF8C /* ArticleListTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleListTVC.xib; sourceTree = "<group>"; };
+		8BF6512326F7BCD20073BF8C /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +88,7 @@
 			children = (
 				8BF650ED26F78D910073BF8C /* AppDelegate.swift */,
 				8BF650EF26F78D910073BF8C /* SceneDelegate.swift */,
+				8BF6511826F7AD8E0073BF8C /* Article List */,
 				8BF650F126F78D910073BF8C /* ViewController.swift */,
 				8BF650F326F78D910073BF8C /* Main.storyboard */,
 				8BF650F626F78D930073BF8C /* Assets.xcassets */,
@@ -86,6 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				8BF6510126F797CB0073BF8C /* ImageDownloaderEx.swift */,
+				8BF6511B26F7B8350073BF8C /* StoryboardEx.swift */,
+				8BF6511D26F7BBC90073BF8C /* UIViewControllerEx.swift */,
+				8BF6512326F7BCD20073BF8C /* ReusableProtocol.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -107,6 +129,19 @@
 				8BF6511026F7A0200073BF8C /* Model.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8BF6511826F7AD8E0073BF8C /* Article List */ = {
+			isa = PBXGroup;
+			children = (
+				8BF6511226F7AD710073BF8C /* ArticleListVC.swift */,
+				8BF6511426F7AD7D0073BF8C /* ArticleListVM.swift */,
+				8BF6511626F7AD890073BF8C /* ArticleListService.swift */,
+				8BF6511926F7ADBC0073BF8C /* ArticleModel.swift */,
+				8BF6511F26F7BCAB0073BF8C /* ArticleListTVC.swift */,
+				8BF6512026F7BCAB0073BF8C /* ArticleListTVC.xib */,
+			);
+			path = "Article List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF6512226F7BCAB0073BF8C /* ArticleListTVC.xib in Resources */,
 				8BF650FA26F78D930073BF8C /* LaunchScreen.storyboard in Resources */,
 				8BF650F726F78D930073BF8C /* Assets.xcassets in Resources */,
 				8BF650F526F78D910073BF8C /* Main.storyboard in Resources */,
@@ -179,13 +215,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF6511A26F7ADBC0073BF8C /* ArticleModel.swift in Sources */,
+				8BF6511C26F7B8350073BF8C /* StoryboardEx.swift in Sources */,
 				8BF650F226F78D910073BF8C /* ViewController.swift in Sources */,
 				8BF6510D26F79F1A0073BF8C /* Request.swift in Sources */,
 				8BF6510726F79A160073BF8C /* Observable.swift in Sources */,
 				8BF6510226F797CB0073BF8C /* ImageDownloaderEx.swift in Sources */,
+				8BF6511E26F7BBC90073BF8C /* UIViewControllerEx.swift in Sources */,
+				8BF6511526F7AD7D0073BF8C /* ArticleListVM.swift in Sources */,
 				8BF6511126F7A0200073BF8C /* Model.swift in Sources */,
 				8BF650EE26F78D910073BF8C /* AppDelegate.swift in Sources */,
+				8BF6512426F7BCD20073BF8C /* ReusableProtocol.swift in Sources */,
 				8BF6510526F799D10073BF8C /* MVVMHelpers.swift in Sources */,
+				8BF6511726F7AD890073BF8C /* ArticleListService.swift in Sources */,
+				8BF6512126F7BCAB0073BF8C /* ArticleListTVC.swift in Sources */,
+				8BF6511326F7AD710073BF8C /* ArticleListVC.swift in Sources */,
 				8BF650F026F78D910073BF8C /* SceneDelegate.swift in Sources */,
 				8BF6510A26F79B330073BF8C /* NetworkService.swift in Sources */,
 			);
