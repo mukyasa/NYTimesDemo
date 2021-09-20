@@ -3,7 +3,7 @@ A demo app to test NYTimes Most popular API
 
 ### Project 
 * MVVM Architecture
-* Xcode 12.5m Min iOS 13
+* Mininum support Xcode 12.5, iOS 13
 * The project contains two target one runs application and other is Unit test
 
 ### Unit Test
